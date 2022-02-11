@@ -1,0 +1,5 @@
+{
+    "route": [
+        {"url": "test", "view": "testView"}
+    ]
+}
