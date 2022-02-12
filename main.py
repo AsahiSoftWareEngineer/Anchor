@@ -5,6 +5,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 JSON_DIR =  os.path.join(BASE_DIR, "Controller")
+settingData = ""
+
+with open(f'{JSON_DIR}/setting.json', 'r', encoding='utf8') as settings:
+    data = json.load(settings)
+    settingData = data["settings"]
+    
+    
 
 @route('/static/css/<filename:path>')
 def send_static(filename):
@@ -50,6 +57,6 @@ def Main(url):
         backData = data["content"]
     return template(templateName, backData)
 
-run(host='localhost', port=8000, debug=True)
+run(host=settingData["host"], port=settingData["port"], debug=bool(settingData["debug"]))
 
 

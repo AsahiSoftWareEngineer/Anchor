@@ -1,5 +1,5 @@
 {
     "views": [
-        {"name": "testView", "template": "index.html", "content_file": "content/index.json"}
+        {"name": "sampleView", "template": "index.html", "content_file": "content/index.json"}
     ]
 }

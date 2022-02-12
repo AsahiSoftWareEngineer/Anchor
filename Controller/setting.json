@@ -1,0 +1,7 @@
+{
+    "settings":{
+        "port":8080,
+        "host": "localhost",
+        "debug": "True"
+    }
+}
